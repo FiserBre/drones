@@ -15,11 +15,21 @@
   <body class="min-h-screen bg-slate-950 text-slate-100">
     <main class="w-full overflow-x-hidden">
       <section
+        id="home"
         class="relative flex min-h-screen items-center justify-center bg-[url('public/background.png')] bg-cover bg-center px-4 text-center sm:px-6"
       >
         <div
           class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/45 via-slate-900/10 to-slate-950/70"
         ></div>
+
+        <div class="absolute inset-x-0 top-0 z-30 px-4 py-5 sm:px-6">
+          <nav class="mx-auto flex max-w-6xl items-center justify-center gap-8 text-[20px] font-semibold text-slate-100/90 sm:justify-end">
+            <a href="#home" class="transition hover:text-white">Home</a>
+            <a href="#about" class="transition hover:text-white">About Us</a>
+            <a href="#drones" class="transition hover:text-white">Drones</a>
+            <a href="#gallery" class="transition hover:text-white">Gallery</a>
+          </nav>
+        </div>
 
         <div class="hero-content relative z-10 mx-auto max-w-5xl">
           <h1
@@ -39,7 +49,7 @@
           <img
             src="public/drone.png"
             alt="drone"
-            class="hero-drone pointer-events-none absolute left-1/2 top-[72%] z-20 h-44 w-auto -translate-x-1/2 -translate-y-1/2 object-contain sm:h-56 md:h-64"
+            class="hero-drone pointer-events-none absolute left-1/2 top-[67%] z-20 h-44 w-auto -translate-x-1/2 -translate-y-1/2 object-contain sm:h-56 md:h-64"
           />
 
           <p
@@ -50,7 +60,7 @@
         </div>
       </section>
 
-      <section class="mx-auto w-full max-w-6xl px-4 py-28 sm:px-8">
+      <section id="about" class="mx-auto w-full max-w-6xl px-4 py-28 sm:px-8">
         <h2 class="fade-up text-3xl font-semibold tracking-tight sm:text-5xl">
           Why Pilots Choose Us
         </h2>
@@ -83,7 +93,7 @@
         </div>
       </section>
 
-      <section class="mx-auto w-full max-w-6xl px-4 py-24 sm:px-8">
+      <section id="drones" class="mx-auto w-full max-w-6xl px-4 py-24 sm:px-8">
         <div
           class="rounded-3xl border border-white/10 bg-slate-900/60 p-8 sm:p-12"
         >
@@ -93,7 +103,7 @@
           <div class="mt-10 grid gap-6 sm:grid-cols-3">
             <div class="rounded-xl bg-slate-800/70 p-6">
               <p class="stat-number text-5xl font-bold" data-target="42">0</p>
-              <p class="mt-2 text-slate-300">Minutes flight time</p>
+              <p class="mt-2 text-slate-300">flight time</p>
             </div>
             <div class="rounded-xl bg-slate-800/70 p-6">
               <p class="stat-number text-5xl font-bold" data-target="18">0</p>
@@ -101,7 +111,7 @@
             </div>
             <div class="rounded-xl bg-slate-800/70 p-6">
               <p class="stat-number text-5xl font-bold" data-target="6">0</p>
-              <p class="mt-2 text-slate-300">Sensors for obstacle avoidance</p>
+              <p class="mt-2 text-slate-300">Advanced sensors</p>
             </div>
           </div>
         </div>
@@ -159,6 +169,7 @@
       </section>
 
       <section
+        id="gallery"
         class="mx-auto w-full max-w-5xl px-4 pb-24 pt-16 text-center sm:px-8"
       >
         <p class="fade-up text-lg text-slate-300">
