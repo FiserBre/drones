@@ -7,29 +7,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --c-cream: #f4f1ec;
+        --c-rose: #c9a99a;
+        --c-slate: #95a7b3;
+        --c-petrol: #3d565c;
+        --c-charcoal: #161e21;
+        --c-black: #0a0d0e;
+        --c-muted: #aab6bf;
+      }
+      body {
+        font-family: "Outfit", system-ui, sans-serif;
+      }
+    </style>
   </head>
-  <body class="min-h-screen bg-[#192530] text-slate-100">
+  <body class="min-h-screen bg-[var(--c-charcoal)] text-[var(--c-cream)] antialiased">
     <main class="w-full overflow-x-hidden">
       <section
         id="home"
         class="relative flex min-h-screen items-center justify-center bg-[url('public/background.png')] bg-cover bg-center px-4 text-center sm:px-6"
       >
         <div
-          class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/45 via-slate-900/10 to-slate-950/70"
+          class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[color-mix(in_srgb,var(--c-black)_55%,transparent)] via-[color-mix(in_srgb,var(--c-petrol)_12%,transparent)] to-[color-mix(in_srgb,var(--c-charcoal)_88%,transparent)]"
         ></div>
 
         <div class="absolute inset-x-0 top-0 z-30 px-4 py-5 sm:px-6">
-          <nav class="mx-auto flex items-center justify-between text-[14px] font-semibold text-slate-100 transition sm:text-[18px] md:text-[22px]">
-            <div class="">Professional Drones</div>
+          <nav class="mx-auto flex items-center justify-between text-[14px] font-semibold text-[var(--c-slate)] transition sm:text-[18px] md:text-[22px]">
+            <div class="tracking-tight text-[var(--c-cream)]">Professional Drones</div>
             <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
-              <a href="#home" class="transition hover:text-white">Home</a>
-              <a href="#about" class="transition hover:text-white">About Us</a>
-              <a href="#drones" class="transition hover:text-white">Drones</a>
-              <a href="#gallery" class="transition hover:text-white">Gallery</a>
+              <a href="#home" class="transition hover:text-[var(--c-cream)]">Home</a>
+              <a href="#about" class="transition hover:text-[var(--c-cream)]">About Us</a>
+              <a href="#drones" class="transition hover:text-[var(--c-cream)]">Drones</a>
+              <a href="#gallery" class="transition hover:text-[var(--c-cream)]">Gallery</a>
             </div>
           </nav>
         </div>
@@ -40,11 +54,11 @@
             class="font-['Anton'] uppercase leading-[0.9] tracking-[0.02em]"
           >
             <span
-              class="hero-title block text-[20vw] text-zinc-100 sm:text-[9.6rem]"
+              class="hero-title block text-[20vw] text-[var(--c-cream)] sm:text-[9.6rem]"
               >Professional</span
             >
             <span
-              class="hero-title block text-[16vw] text-transparent sm:text-[7.5rem] bg-gradient-to-b from-zinc-100 via-zinc-300 to-zinc-900 bg-clip-text"
+              class="hero-title block text-[16vw] text-transparent sm:text-[7.5rem] bg-gradient-to-b from-[var(--c-cream)] via-[var(--c-slate)] to-[var(--c-petrol)] bg-clip-text"
               >Drones</span
             >
           </h1>
@@ -56,7 +70,7 @@
           />
 
           <p
-            class="hero-sub mt-28 text-sm font-medium tracking-wider text-zinc-200/95 sm:text-xl"
+            class="hero-sub mt-28 text-sm font-medium tracking-wider text-[var(--c-muted)] sm:text-xl"
           >
             Scroll down and explore the flight experience
           </p>
@@ -64,32 +78,32 @@
       </section>
 
       <section id="about" class="mx-auto w-full max-w-6xl px-4 py-28 sm:px-8">
-        <h2 class="fade-up text-3xl font-semibold tracking-tight sm:text-5xl">
+        <h2 class="fade-up text-3xl font-semibold tracking-tight text-[var(--c-cream)] sm:text-5xl">
           Why Pilots Choose Us
         </h2>
         <div class="mt-12 grid gap-6 md:grid-cols-3">
           <article
-            class="reveal-card rounded-2xl border border-white/15 bg-[#afc3cc]/20 p-6 backdrop-blur"
+            class="reveal-card rounded-2xl border border-[color-mix(in_srgb,var(--c-slate)_32%,transparent)] bg-[color-mix(in_srgb,var(--c-slate)_14%,transparent)] p-6 backdrop-blur"
           >
-            <h3 class="text-xl font-semibold">Cinematic videos</h3>
-            <p class="mt-3 text-slate-300">
+            <h3 class="text-xl font-semibold text-[var(--c-cream)]">Cinematic videos</h3>
+            <p class="mt-3 text-[var(--c-muted)]">
               Multi-axis camera stabilization gives clean footage even in windy
               conditions.
             </p>
           </article>
           <article
-            class="reveal-card rounded-2xl border border-white/15 bg-[#afc3cc]/20 p-6 backdrop-blur"
+            class="reveal-card rounded-2xl border border-[color-mix(in_srgb,var(--c-slate)_32%,transparent)] bg-[color-mix(in_srgb,var(--c-rose)_12%,transparent)] p-6 backdrop-blur"
           >
-            <h3 class="text-xl font-semibold">Flight time</h3>
-            <p class="mt-3 text-slate-300">
+            <h3 class="text-xl font-semibold text-[var(--c-cream)]">Flight time</h3>
+            <p class="mt-3 text-[var(--c-muted)]">
               Advanced battery cells and power routing keep missions running longer.
             </p>
           </article>
           <article
-            class="reveal-card rounded-2xl border border-white/15 bg-[#afc3cc]/20 p-6 backdrop-blur"
+            class="reveal-card rounded-2xl border border-[color-mix(in_srgb,var(--c-slate)_32%,transparent)] bg-[color-mix(in_srgb,var(--c-petrol)_22%,transparent)] p-6 backdrop-blur"
           >
-            <h3 class="text-xl font-semibold">Smart Tracking</h3>
-            <p class="mt-3 text-slate-300">
+            <h3 class="text-xl font-semibold text-[var(--c-cream)]">Smart Tracking</h3>
+            <p class="mt-3 text-[var(--c-muted)]">
               Lock onto moving subjects and maintain smooth autonomous motion using cameras and sensors.
             </p>
           </article>
@@ -98,23 +112,23 @@
 
       <section id="drones" class="mx-auto w-full max-w-6xl px-4 py-24 sm:px-8">
         <div
-          class="rounded-3xl border border-white/10 bg-slate-900/60 p-8 sm:p-12"
+          class="rounded-3xl border border-[color-mix(in_srgb,var(--c-slate)_22%,transparent)] bg-[color-mix(in_srgb,var(--c-petrol)_28%,var(--c-charcoal))] p-8 sm:p-12"
         >
-          <h2 class="fade-up text-3xl font-semibold sm:text-5xl">
+          <h2 class="fade-up text-3xl font-semibold text-[var(--c-cream)] sm:text-5xl">
             Performance Snapshot
           </h2>
           <div class="mt-10 grid gap-6 sm:grid-cols-3">
-            <div class="rounded-xl bg-slate-800/70 p-6">
-              <p class="stat-number text-5xl font-bold" data-target="42">0</p>
-              <p class="mt-2 text-slate-300">flight time</p>
+            <div class="rounded-xl bg-[color-mix(in_srgb,var(--c-black)_45%,var(--c-petrol))] p-6 ring-1 ring-[color-mix(in_srgb,var(--c-slate)_18%,transparent)]">
+              <p class="stat-number text-5xl font-bold text-[var(--c-slate)]" data-target="42">0</p>
+              <p class="mt-2 text-[var(--c-muted)]">flight time</p>
             </div>
-            <div class="rounded-xl bg-slate-800/70 p-6">
-              <p class="stat-number text-5xl font-bold" data-target="18">0</p>
-              <p class="mt-2 text-slate-300">Km range</p>
+            <div class="rounded-xl bg-[color-mix(in_srgb,var(--c-black)_45%,var(--c-petrol))] p-6 ring-1 ring-[color-mix(in_srgb,var(--c-slate)_18%,transparent)]">
+              <p class="stat-number text-5xl font-bold text-[var(--c-rose)]" data-target="18">0</p>
+              <p class="mt-2 text-[var(--c-muted)]">Km range</p>
             </div>
-            <div class="rounded-xl bg-slate-800/70 p-6">
-              <p class="stat-number text-5xl font-bold" data-target="6">0</p>
-              <p class="mt-2 text-slate-300">Advanced sensors</p>
+            <div class="rounded-xl bg-[color-mix(in_srgb,var(--c-black)_45%,var(--c-petrol))] p-6 ring-1 ring-[color-mix(in_srgb,var(--c-slate)_18%,transparent)]">
+              <p class="stat-number text-5xl font-bold text-[var(--c-cream)]" data-target="6">0</p>
+              <p class="mt-2 text-[var(--c-muted)]">Advanced sensors</p>
             </div>
           </div>
         </div>
@@ -122,46 +136,46 @@
 
       <section class="h-section relative py-16">
         <h2
-          class="fade-up mb-8 px-4 text-center text-3xl font-semibold sm:text-5xl"
+          class="fade-up mb-8 px-4 text-center text-3xl font-semibold text-[var(--c-cream)] sm:text-5xl"
         >
           Flight Modes
         </h2>
         <div class="h-wrap overflow-hidden">
           <div class="h-track flex w-[300vw]">
             <article
-              class="panel flex h-[70vh] w-screen items-center justify-center bg-gradient-to-br from-cyan-500/30 to-blue-700/35 px-8"
+              class="panel flex h-[70vh] w-screen items-center justify-center bg-gradient-to-br from-[color-mix(in_srgb,var(--c-slate)_38%,transparent)] to-[color-mix(in_srgb,var(--c-petrol)_42%,transparent)] px-8"
             >
               <div
-                class="max-w-xl rounded-2xl border border-white/20 bg-slate-900/60 p-8 text-center backdrop-blur"
+                class="max-w-xl rounded-2xl border border-[color-mix(in_srgb,var(--c-cream)_16%,transparent)] bg-[color-mix(in_srgb,var(--c-charcoal)_78%,transparent)] p-8 text-center backdrop-blur"
               >
-                <h3 class="text-3xl font-bold">Follow Mode</h3>
-                <p class="mt-3 text-slate-200">
+                <h3 class="text-3xl font-bold text-[var(--c-cream)]">Follow Mode</h3>
+                <p class="mt-3 text-[var(--c-muted)]">
                   The drone follows your subject with smooth acceleration and
                   predictive framing.
                 </p>
               </div>
             </article>
             <article
-              class="panel flex h-[70vh] w-screen items-center justify-center bg-gradient-to-br from-fuchsia-500/30 to-rose-700/35 px-8"
+              class="panel flex h-[70vh] w-screen items-center justify-center bg-gradient-to-br from-[color-mix(in_srgb,var(--c-rose)_35%,transparent)] to-[color-mix(in_srgb,var(--c-petrol)_45%,transparent)] px-8"
             >
               <div
-                class="max-w-xl rounded-2xl border border-white/20 bg-slate-900/60 p-8 text-center backdrop-blur"
+                class="max-w-xl rounded-2xl border border-[color-mix(in_srgb,var(--c-cream)_16%,transparent)] bg-[color-mix(in_srgb,var(--c-charcoal)_78%,transparent)] p-8 text-center backdrop-blur"
               >
-                <h3 class="text-3xl font-bold">Orbit Mode</h3>
-                <p class="mt-3 text-slate-200">
+                <h3 class="text-3xl font-bold text-[var(--c-cream)]">Orbit Mode</h3>
+                <p class="mt-3 text-[var(--c-muted)]">
                   Set the radius and altitude, then capture dramatic circular
                   shots around your target.
                 </p>
               </div>
             </article>
             <article
-              class="panel flex h-[70vh] w-screen items-center justify-center bg-gradient-to-br from-emerald-500/30 to-lime-700/35 px-8"
+              class="panel flex h-[70vh] w-screen items-center justify-center bg-gradient-to-br from-[color-mix(in_srgb,var(--c-petrol)_48%,transparent)] to-[color-mix(in_srgb,var(--c-black)_55%,transparent)] px-8"
             >
               <div
-                class="max-w-xl rounded-2xl border border-white/20 bg-slate-900/60 p-8 text-center backdrop-blur"
+                class="max-w-xl rounded-2xl border border-[color-mix(in_srgb,var(--c-cream)_16%,transparent)] bg-[color-mix(in_srgb,var(--c-charcoal)_78%,transparent)] p-8 text-center backdrop-blur"
               >
-                <h3 class="text-3xl font-bold">Hyperlapse Mode</h3>
-                <p class="mt-3 text-slate-200">
+                <h3 class="text-3xl font-bold text-[var(--c-cream)]">Hyperlapse Mode</h3>
+                <p class="mt-3 text-[var(--c-muted)]">
                   Automated route capture combines precision navigation with
                   cinematic timelapse output.
                 </p>
@@ -175,42 +189,42 @@
         id="gallery"
         class="mx-auto w-full max-w-5xl px-4 pb-24 pt-16 text-center sm:px-8"
       >
-        <p class="fade-up text-lg text-slate-300">
+        <p class="fade-up text-lg text-[var(--c-muted)]">
           Ready for your first autonomous mission?
         </p>
         <button
-          class="fade-up mt-6 rounded-xl bg-white px-8 py-3 font-semibold text-slate-900 transition hover:bg-slate-200"
+          class="fade-up mt-6 rounded-xl bg-[var(--c-cream)] px-8 py-3 font-semibold text-[var(--c-charcoal)] transition hover:bg-[var(--c-slate)] hover:text-[var(--c-black)]"
         >
           Book a Demo Flight
         </button>
       </section>
 
       <section id="contact" class="mx-auto w-full max-w-3xl px-4 py-24 sm:px-8">
-        <div class="rounded-3xl border border-white/10 bg-slate-900/60 p-8 sm:p-12 backdrop-blur">
-          <h2 class="fade-up text-3xl font-semibold sm:text-5xl text-center mb-10">Contact Us</h2>
+        <div class="rounded-3xl border border-[color-mix(in_srgb,var(--c-slate)_22%,transparent)] bg-[color-mix(in_srgb,var(--c-petrol)_22%,var(--c-charcoal))] p-8 sm:p-12 backdrop-blur">
+          <h2 class="fade-up text-3xl font-semibold sm:text-5xl text-center mb-10 text-[var(--c-cream)]">Contact Us</h2>
           
           <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-6">
           <input type="hidden" name="access_key" value="e2645edf-fe68-48c6-85d3-dec8a02cac08">
             <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+              <label class="block text-sm font-medium text-[var(--c-muted)] mb-2">Full Name</label>
               <input type="text" name="name" required 
-                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan-500/50 transition">
+                class="w-full rounded-xl border border-[color-mix(in_srgb,var(--c-slate)_28%,transparent)] bg-[color-mix(in_srgb,var(--c-cream)_6%,transparent)] px-4 py-3 text-[var(--c-cream)] outline-none focus:border-[var(--c-slate)] transition">
             </div>
             
             <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+              <label class="block text-sm font-medium text-[var(--c-muted)] mb-2">Email Address</label>
               <input type="email" name="_replyto" required 
-                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan-500/50 transition">
+                class="w-full rounded-xl border border-[color-mix(in_srgb,var(--c-slate)_28%,transparent)] bg-[color-mix(in_srgb,var(--c-cream)_6%,transparent)] px-4 py-3 text-[var(--c-cream)] outline-none focus:border-[var(--c-slate)] transition">
             </div>
       
             <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+              <label class="block text-sm font-medium text-[var(--c-muted)] mb-2">Message</label>
               <textarea name="message" rows="4" required 
-                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan-500/50 transition"></textarea>
+                class="w-full rounded-xl border border-[color-mix(in_srgb,var(--c-slate)_28%,transparent)] bg-[color-mix(in_srgb,var(--c-cream)_6%,transparent)] px-4 py-3 text-[var(--c-cream)] outline-none focus:border-[var(--c-slate)] transition"></textarea>
             </div>
       
             <button type="submit" 
-              class="mt-4 w-full rounded-xl bg-white py-4 font-bold text-slate-900 transition hover:bg-cyan-400 hover:scale-[1.02] active:scale-95">
+              class="mt-4 w-full rounded-xl bg-[var(--c-cream)] py-4 font-bold text-[var(--c-charcoal)] transition hover:bg-[var(--c-slate)] hover:text-[var(--c-black)] hover:scale-[1.02] active:scale-95">
               Send Message
             </button>
           </form>
