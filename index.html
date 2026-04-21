@@ -23,11 +23,14 @@
         ></div>
 
         <div class="absolute inset-x-0 top-0 z-30 px-4 py-5 sm:px-6">
-          <nav class="mx-auto flex flex-wrap justify-center gap-4 text-[14px] font-semibold text-slate-100 transition sm:justify-end sm:gap-8 sm:text-[18px] md:text-[22px]">
-            <a href="#home" class="transition hover:text-white">Home</a>
-            <a href="#about" class="transition hover:text-white">About Us</a>
-            <a href="#drones" class="transition hover:text-white">Drones</a>
-            <a href="#gallery" class="transition hover:text-white">Gallery</a>
+          <nav class="mx-auto flex items-center justify-between text-[14px] font-semibold text-slate-100 transition sm:text-[18px] md:text-[22px]">
+            <div class="">Professional Drones</div>
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
+              <a href="#home" class="transition hover:text-white">Home</a>
+              <a href="#about" class="transition hover:text-white">About Us</a>
+              <a href="#drones" class="transition hover:text-white">Drones</a>
+              <a href="#gallery" class="transition hover:text-white">Gallery</a>
+            </div>
           </nav>
         </div>
 
@@ -180,6 +183,38 @@
         >
           Book a Demo Flight
         </button>
+      </section>
+
+      <section id="contact" class="mx-auto w-full max-w-3xl px-4 py-24 sm:px-8">
+        <div class="rounded-3xl border border-white/10 bg-slate-900/60 p-8 sm:p-12 backdrop-blur">
+          <h2 class="fade-up text-3xl font-semibold sm:text-5xl text-center mb-10">Contact Us</h2>
+          
+          <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-6">
+          <input type="hidden" name="access_key" value="e2645edf-fe68-48c6-85d3-dec8a02cac08">
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+              <input type="text" name="name" required 
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan-500/50 transition">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+              <input type="email" name="_replyto" required 
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan-500/50 transition">
+            </div>
+      
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+              <textarea name="message" rows="4" required 
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan-500/50 transition"></textarea>
+            </div>
+      
+            <button type="submit" 
+              class="mt-4 w-full rounded-xl bg-white py-4 font-bold text-slate-900 transition hover:bg-cyan-400 hover:scale-[1.02] active:scale-95">
+              Send Message
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
