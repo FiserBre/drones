@@ -117,3 +117,18 @@ if (!prefersReducedMotion) {
     counter.textContent = String(target);
   });
 }
+
+const contactNavLinks = document.querySelectorAll('a[href="#contact"]');
+const contactSection = document.querySelector("#contact");
+
+if (contactNavLinks.length && contactSection) {
+  contactNavLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+        top: contactSection.offsetTop,
+        behavior: "auto",
+      });
+    });
+  });
+}
