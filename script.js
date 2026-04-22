@@ -94,17 +94,20 @@ if (!prefersReducedMotion) {
   const hTrack = document.querySelector(".h-track");
 
   if (hSection && hTrack) {
-    const panels = gsap.utils.toArray(".panel");
+    const endGap = 220;
+    const getScrollDistance = () =>
+      Math.max(0, hTrack.scrollWidth - window.innerWidth);
 
     gsap.to(hTrack, {
-      xPercent: -100 * (panels.length - 1),
+      x: () => -getScrollDistance(),
       ease: "none",
       scrollTrigger: {
         trigger: hSection,
         pin: true,
         scrub: 1,
         start: "top top",
-        end: () => "+=" + (hTrack.scrollWidth - window.innerWidth),
+        end: () => "+=" + (getScrollDistance() + endGap),
+        invalidateOnRefresh: true,
       },
     });
   }
