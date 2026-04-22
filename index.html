@@ -38,10 +38,34 @@
         flex: 0 0 100vw;
         width: 100vw;
       }
+      .skip-link {
+        position: absolute;
+        left: 0.75rem;
+        top: 0.75rem;
+        z-index: 60;
+        transform: translateY(-180%);
+        border-radius: 0.5rem;
+        background: var(--c-cream);
+        color: var(--c-charcoal);
+        padding: 0.6rem 0.9rem;
+        font-weight: 700;
+        transition: transform 0.2s ease;
+      }
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid var(--c-cream);
+        outline-offset: 3px;
+      }
     </style>
   </head>
   <body class="min-h-screen bg-[var(--c-charcoal)] text-[var(--c-cream)] antialiased">
-    <main class="w-full overflow-x-hidden">
+    <a class="skip-link" href="#main-content">Preskočit na hlavní obsah</a>
+    <main id="main-content" class="w-full overflow-x-hidden">
       <section
         id="home"
         class="relative flex min-h-screen items-center justify-center bg-[url('public/background.png')] bg-cover bg-center px-4 text-center sm:px-6"
@@ -52,6 +76,7 @@
 
         <div class="absolute inset-x-0 top-0 z-30 py-4 pl-2 pr-4 sm:py-5 sm:pl-4 md:pl-6 lg:pl-8">
           <nav
+            aria-label="Hlavní navigace"
             class="mx-auto flex w-full max-w-6xl flex-col items-start gap-3 text-left text-[13px] font-semibold text-[var(--c-slate)] transition sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:text-[15px] md:text-[17px] lg:text-[20px]"
           >
             <div class="shrink-0 text-left tracking-tight text-[var(--c-cream)]">
@@ -101,7 +126,7 @@
 
           <img
             src="public/drone.png"
-            alt="drone"
+            alt="Produktový dron v letu"
             class="hero-drone pointer-events-none absolute left-1/2 top-[62%] z-20 h-36 w-auto -translate-x-1/2 -translate-y-1/2 object-contain min-[400px]:h-40 sm:top-[64%] sm:h-48 md:h-56 lg:h-64"
           />
 
@@ -155,15 +180,15 @@
           </h2>
           <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
             <div class="rounded-xl bg-[color-mix(in_srgb,var(--c-black)_45%,var(--c-petrol))] p-5 ring-1 ring-[color-mix(in_srgb,var(--c-slate)_18%,transparent)] sm:p-6">
-              <p class="stat-number text-4xl font-bold tabular-nums text-[var(--c-slate)] sm:text-5xl" data-target="42">0</p>
+              <p class="stat-number text-4xl font-bold tabular-nums text-[var(--c-slate)] sm:text-5xl" data-target="42" aria-live="polite">0</p>
               <p class="mt-2 text-sm text-[var(--c-muted)] sm:text-base">flight time</p>
             </div>
             <div class="rounded-xl bg-[color-mix(in_srgb,var(--c-black)_45%,var(--c-petrol))] p-5 ring-1 ring-[color-mix(in_srgb,var(--c-slate)_18%,transparent)] sm:p-6">
-              <p class="stat-number text-4xl font-bold tabular-nums text-[var(--c-rose)] sm:text-5xl" data-target="18">0</p>
+              <p class="stat-number text-4xl font-bold tabular-nums text-[var(--c-rose)] sm:text-5xl" data-target="18" aria-live="polite">0</p>
               <p class="mt-2 text-sm text-[var(--c-muted)] sm:text-base">Km range</p>
             </div>
             <div class="rounded-xl bg-[color-mix(in_srgb,var(--c-black)_45%,var(--c-petrol))] p-5 ring-1 ring-[color-mix(in_srgb,var(--c-slate)_18%,transparent)] sm:col-span-2 sm:p-6 lg:col-span-1">
-              <p class="stat-number text-4xl font-bold tabular-nums text-[var(--c-cream)] sm:text-5xl" data-target="6">0</p>
+              <p class="stat-number text-4xl font-bold tabular-nums text-[var(--c-cream)] sm:text-5xl" data-target="6" aria-live="polite">0</p>
               <p class="mt-2 text-sm text-[var(--c-muted)] sm:text-base">Advanced sensors</p>
             </div>
           </div>
@@ -267,20 +292,20 @@
           <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-5 sm:gap-6">
           <input type="hidden" name="access_key" value="e2645edf-fe68-48c6-85d3-dec8a02cac08">
             <div>
-              <label class="block text-sm font-medium text-[var(--c-muted)] mb-2">Full Name</label>
-              <input type="text" name="name" required 
+              <label for="name" class="block text-sm font-medium text-[var(--c-muted)] mb-2">Full Name</label>
+              <input id="name" type="text" name="name" autocomplete="name" required 
                 class="min-h-[48px] w-full rounded-xl border border-[color-mix(in_srgb,var(--c-slate)_28%,transparent)] bg-[color-mix(in_srgb,var(--c-cream)_6%,transparent)] px-4 py-3 text-base text-[var(--c-cream)] outline-none focus:border-[var(--c-slate)] transition">
             </div>
             
             <div>
-              <label class="block text-sm font-medium text-[var(--c-muted)] mb-2">Email Address</label>
-              <input type="email" name="_replyto" required 
+              <label for="email" class="block text-sm font-medium text-[var(--c-muted)] mb-2">Email Address</label>
+              <input id="email" type="email" name="_replyto" autocomplete="email" required 
                 class="min-h-[48px] w-full rounded-xl border border-[color-mix(in_srgb,var(--c-slate)_28%,transparent)] bg-[color-mix(in_srgb,var(--c-cream)_6%,transparent)] px-4 py-3 text-base text-[var(--c-cream)] outline-none focus:border-[var(--c-slate)] transition">
             </div>
       
             <div>
-              <label class="block text-sm font-medium text-[var(--c-muted)] mb-2">Message</label>
-              <textarea name="message" rows="4" required 
+              <label for="message" class="block text-sm font-medium text-[var(--c-muted)] mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required 
                 class="min-h-[8rem] w-full resize-y rounded-xl border border-[color-mix(in_srgb,var(--c-slate)_28%,transparent)] bg-[color-mix(in_srgb,var(--c-cream)_6%,transparent)] px-4 py-3 text-base text-[var(--c-cream)] outline-none focus:border-[var(--c-slate)] transition sm:min-h-[9rem]"></textarea>
             </div>
       
